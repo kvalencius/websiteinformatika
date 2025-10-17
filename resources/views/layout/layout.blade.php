@@ -17,9 +17,9 @@
         <div id="site_content">
             <div id="content_header">
             <main class="col-md-8">
-                @include('lainnya.content')
+                @yield('lainnya.content')
             <aside class="col-md-4">
-                @include('lainnya.sidebar')
+                @yield('lainnya.sidebar')
             </aside>
             </main>
             </div>
