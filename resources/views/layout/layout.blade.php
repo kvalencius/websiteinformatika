@@ -1,16 +1,17 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
-  <title>black &amp; white</title>
+  <title>Prodi Informatika</title>
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
-
 </head>
 <body>
 <div class="main">
+    <header>
     @include('lainnya.header')
+    </header>
     <div class="container mt-4">
         <div class="row">
         <div id="site_content">
@@ -26,7 +27,9 @@
     </div>
 </div>
 </div>
+<footer>
     @include('lainnya.footer')
+</footer>
 </body>
 
 </html>
