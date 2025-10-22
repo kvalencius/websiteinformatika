@@ -25,3 +25,8 @@ Route::get('/profil', function () {
 Route::get('/riset', function () {
     return view('layout.riset.riset');
 });
+
+//admin
+route::get('/admin', function () {
+    return view('admin.mahasiswa.index');
+});
