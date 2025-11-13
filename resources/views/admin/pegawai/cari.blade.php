@@ -70,7 +70,7 @@
 
 <!-- Pagination -->
 <div class="d-flex justify-content-center mt-3">
-  {{ $pegawai->links('pagination::bootstrap-5') }}
+  {{ $pegawai->links('vendor.pagination.bootstrap-5-small') }}
 </div>
 
         </main>

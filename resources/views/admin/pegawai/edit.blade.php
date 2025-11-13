@@ -9,23 +9,23 @@
     </div>  
 
 <!-- Form Tambah Pegawai -->
-<form action="/pegawai/store" method="POST">
+<form action="/pegawai/update/{{ $pegawai->pegawai_id }}" method="POST">
     {{ csrf_field() }}
 <div class="mb-3">
   <label for="Nama" class="form-label">Nama Pegawai</label>
-  <input type="text" class="form-control" id="nama" placeholder="Rudi" name="nama">
+  <input type="text" class="form-control" id="nama"  name="nama" value="{{ $pegawai->pegawai_nama }}">
 </div>
 <div class="mb-3">
   <label for="Jabatan" class="form-label">Jabatan Pegawai</label>
-  <input type="text" class="form-control" id="jabatan" placeholder="Web Developer" name="jabatan">
+  <input type="text" class="form-control" id="jabatan" placeholder="Web Developer" name="jabatan" value="{{ $pegawai->pegawai_jabatan }}">
 </div>
 <div class="mb-3">
   <label for="Umur" class="form-label">Umur Pegawai</label>
-  <input type="number" class="form-control" id="umur" placeholder="30" name="umur">
+  <input type="number" class="form-control" id="umur" name="umur" value="{{ $pegawai->pegawai_umur }}">
 </div>
 <div class="mb-3">
   <label for="Alamat" class="form-label">Alamat Pegawai</label>
-  <textarea class="form-control" id="alamat" rows="3" placeholder="Ki. Gotong Royong No. 646, Sukabumi 30063, Sulut" name="alamat"></textarea>
+  <textarea class="form-control" id="alamat" rows="3" placeholder="Ki. Gotong Royong No. 646, Sukabumi 30063, Sulut" name="alamat">{{ $pegawai->pegawai_alamat }}</textarea>
 </div>
 <div class="d-inline-block ms-2">
 <button type="submit" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-floppy2-fill" viewBox="0 0 16 16">
@@ -34,7 +34,7 @@
 </svg> Simpan</button>
 </div>
 <a href="{{ url('/pegawai') }}">
-<button type="button" class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+<button type="button" class="btn btn-secondary end-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
 </svg> Kembali</button>
 </a>
